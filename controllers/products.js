@@ -1,4 +1,4 @@
-products = require('../data/products')
+const products = require('../data/products')
 
 exports.list = (req, res) => res.json(products)
 

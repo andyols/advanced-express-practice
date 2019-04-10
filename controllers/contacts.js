@@ -1,4 +1,4 @@
-contacts = require('../data/contacts')
+const contacts = require('../data/contacts')
 
 exports.list = (req, res) => res.json(contacts)
 

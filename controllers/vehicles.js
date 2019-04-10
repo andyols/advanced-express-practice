@@ -1,4 +1,4 @@
-vehicles = require('../data/vehicles')
+const vehicles = require('../data/vehicles')
 
 exports.list = (req, res) => res.json(vehicles)
 

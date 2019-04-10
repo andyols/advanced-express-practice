@@ -1,4 +1,4 @@
-comments = require('../data/comments')
+const comments = require('../data/comments')
 
 exports.list = (req, res) => res.json(comments)
 
