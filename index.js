@@ -1,8 +1,8 @@
 const express = require('express')
-const contactsRoute = require('./routes/contacts')
-const commentsRoute = require('./routes/comments')
-const productsRoute = require('./routes/products')
-const vehiclesRoute = require('./routes/vehicles')
+const contacts = require('./routes/contacts')
+const comments = require('./routes/comments')
+const products = require('./routes/products')
+const vehicles = require('./routes/vehicles')
 
 const bodyParser = require('body-parser')
 const app = express()
@@ -10,10 +10,10 @@ const app = express()
 app.use(bodyParser.json())
 app.use(express.static('public'))
 
-app.use('/contacts', contactsRoute)
-app.use('/comments', commentsRoute)
-app.use('/products', productsRoute)
-app.use('/vehicles', vehiclesRoute)
+app.use('/contacts', contacts)
+app.use('/comments', comments)
+app.use('/products', products)
+app.use('/vehicles', vehicles)
 
 const port = process.env.PORT || 4001
 app.listen(port, () => {
